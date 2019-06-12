@@ -4,7 +4,8 @@ A Xamarin.Forms version of a Smart resturent to prove you can create good-lookin
 
 ![Screen](https://github.com/MisterioRee/OnlineResturent/blob/master/src1.gif)
 
-![Screen](https://github.com/MisterioRee/OnlineResturent/blob/master/src2.gif)
+![Screen](https://github.com/MisterioRee/OnlineResturent/blob/master/src2.gif) 
+![Screen](https://github.com/MisterioRee/OnlineResturent/blob/master/src3.gif)
 
 Platforms
 Android, iOS.
