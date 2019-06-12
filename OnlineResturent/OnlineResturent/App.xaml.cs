@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OnlineResturent.Views.Authentication;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -11,7 +12,7 @@ namespace OnlineResturent
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new SignInPage());
         }
 
         protected override void OnStart()

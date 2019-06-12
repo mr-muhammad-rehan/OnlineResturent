@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OnlineResturent.Views.Authentication.SignInPage"
+             BackgroundColor="{StaticResource primeryColorWhite}"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="iOS" Value="10"/>
+        </OnPlatform>
+    </ContentPage.Padding>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="6*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="9*"/>
+        </Grid.RowDefinitions>
+
+        <StackLayout Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
+            <StackLayout Orientation="Horizontal">
+                <Image Source="https://i.ibb.co/fGd48sX/reply-all-button.png" WidthRequest="22" Aspect="AspectFit" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand"/>
+            </StackLayout>
+        </StackLayout>
+
+        <Grid Grid.Column="1" Margin="0,0,0,0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Padding="0" Grid.Row="1">
+            <Frame HasShadow="True" Padding="0" Margin="10,0,0,30" CornerRadius="12" >
+                <StackLayout>
+
+                    <StackLayout Padding="10">
+                        <Label Text="Welcome"  FontFamily="{StaticResource Normal}"  FontSize="32" TextColor="{StaticResource secondryColorBlack}"/>
+                        <Label Text="Back!" FontSize="32" FontFamily="{StaticResource Normal}"   TextColor="{StaticResource secondryColorBlack}" />
+                    </StackLayout>
+
+                    <StackLayout  Padding="10" Margin="0,20,0,0">
+                        <Label Text="USERNAME" TextColor="{StaticResource secondryColorGray}"  />
+                        <Entry Placeholder="Your Name" Margin="10,0,0,10" FontFamily="{StaticResource Normal}" />
+                    </StackLayout>
+
+                    <StackLayout  Padding="10" Margin="0,20,0,0">
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="PASSWORD" TextColor="{StaticResource secondryColorBlack}" />
+                            <Label Text="Forgot Password?" FontFamily="{StaticResource Normal}" TextColor="{StaticResource secondryColorGray}" VerticalOptions="EndAndExpand" HorizontalOptions="EndAndExpand">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"/>
+                                </Label.GestureRecognizers>
+                            </Label>
+                        </StackLayout>
+                        <Entry Placeholder="*******" Margin="10,0,0,10" FontFamily="{StaticResource Normal}" />
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" Padding="10" Margin="0,0,0,0">
+                        <Button Text="" BackgroundColor="#333" TextColor="White" FontSize="Large" Padding="0" WidthRequest="20" HeightRequest="20" VerticalOptions="End" HorizontalOptions="Start" Clicked="Button_Agree_Terms"  />
+                        <Label Text="I Agree Terms and Services" FontSize="16" Margin="10,0,0,0"/>
+                    </StackLayout>
+
+                    <StackLayout VerticalOptions="CenterAndExpand"  Margin="10,0,0,0">
+                        <Button Text="Login" Style="{StaticResource primeryBlackButton}"  Clicked="Button_Clicked"  FontFamily="{StaticResource Normal}" Padding="30,0,30,0"/>
+                    </StackLayout>
+
+                </StackLayout>
+            </Frame>
+        </Grid>
+
+        <Grid Grid.Column="0"  Grid.Row="1" >
+            <StackLayout Spacing="70" VerticalOptions="EndAndExpand"  Orientation="Vertical" Margin="0,0,0,50">
+                <Label  Text="USE AS GUEST" MinimumWidthRequest="120" VerticalOptions="FillAndExpand" FontFamily="{StaticResource Normal}" HorizontalOptions="FillAndExpand" Rotation="-90" />
+                <Label  Text="SIGN IN" TextColor="{StaticResource primeryColorOrange}"  FontFamily="{StaticResource Normal}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Rotation="-90"/>
+                <Label  Text="SIGNUP"  FontFamily="{StaticResource Normal}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"  Rotation="-90" >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_TappedAsync"/>
+                    </Label.GestureRecognizers>
+                </Label>
+
+                <StackLayout Spacing="20">
+                    <Image Source="https://i.ibb.co/x8WpLWN/facebook-logo-1.png" Aspect="AspectFit" WidthRequest="18"/>
+                    <Image Source="https://i.ibb.co/y4V9Qdv/twitter-logo-silhouette.png" Aspect="AspectFit" WidthRequest="18"/>
+                </StackLayout>
+
+            </StackLayout>
+
+        </Grid>
+
+    </Grid>
+
+</ContentPage>

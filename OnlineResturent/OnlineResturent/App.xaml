@@ -3,6 +3,51 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="OnlineResturent.App">
     <Application.Resources>
+        <ResourceDictionary>
+
+            <!--Primary Color-->
+            <Color x:Key="primeryColorOrange">#FF5230</Color>
+            <Color x:Key="primeryColorWhite">#FFFFFF</Color>
+
+            <!--Secondry Color-->
+            <Color x:Key="secondryColorBlack">#292929</Color>
+            <Color x:Key="secondryColorGray">#757575</Color>
+            <Color x:Key="secondryColorOrange">#ff5230</Color>
+
+            <Color x:Key="secondryColorLight">#EDEDED</Color>
+            <Color x:Key="secondryColorWhite">#FAFAFA</Color>
+
+            <Style x:Key="primeryBlackButton"  TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource secondryColorBlack}"/>
+                <Setter Property="TextColor" Value="{StaticResource secondryColorWhite}"/>
+                <Setter Property="CornerRadius" Value="8"/>
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+            </Style>
+
+            <Style x:Key="primeryOrangeButton"  TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource primeryColorOrange}"/>
+                <Setter Property="TextColor" Value="{StaticResource secondryColorWhite}"/>
+                <Setter Property="CornerRadius" Value="8"/>
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+            </Style>
+
+        </ResourceDictionary>
+
+        <OnPlatform x:TypeArguments="x:String" x:Key="Normal">
+            <On Platform="iOS" Value="Montserrat-SemiBold" />
+            <On Platform="Android" Value="Montserrat-SemiBold.otf#SemiBold" />
+        </OnPlatform>
+        <OnPlatform x:TypeArguments="x:String" x:Key="Bold">
+            <On Platform="iOS" Value="Montserrat-Bold" />
+            <On Platform="Android" Value="Montserrat-Bold.otf" />
+        </OnPlatform>
+
+
+        <OnPlatform x:TypeArguments="x:String" x:Key="Thin">
+            <On Platform="iOS" Value="Montserrat-Thin" />
+            <On Platform="Android" Value="Montserrat-Thin.otf#Thin" />
+        </OnPlatform>
+
 
     </Application.Resources>
 </Application>

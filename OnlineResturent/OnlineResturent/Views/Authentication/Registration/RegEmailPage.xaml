@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OnlineResturent.Views.Authentication.Registration.RegEmailPage"
+              NavigationPage.HasNavigationBar="False"
+             Padding="10"
+             BackgroundColor="{StaticResource primeryColorWhite}">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="6*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="9*"/>
+        </Grid.RowDefinitions>
+
+        <StackLayout Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
+            <StackLayout Orientation="Horizontal">
+                <Image Source="https://i.ibb.co/fGd48sX/reply-all-button.png" WidthRequest="22" Aspect="AspectFit" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand"/>
+            </StackLayout>
+        </StackLayout>
+
+        <Grid Grid.Column="1" Margin="0,0,0,0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Padding="0" Grid.Row="1">
+            <Frame HasShadow="True" Padding="0" Margin="10,0,0,30" CornerRadius="12">
+                <StackLayout>
+
+                    <StackLayout Padding="10">
+                        <Label Text="And " FontSize="32" FontFamily="{StaticResource Normal}" TextColor="Black"/>
+                        <Label Text="Your Email?" FontSize="32"  FontFamily="{StaticResource Normal}" TextColor="Black"/>
+                    </StackLayout>
+
+                    <StackLayout  Padding="10" Margin="0,20,0,0">
+                        <Label Text="YOUR EMAIL" TextColor="Gray"/>
+                        <Entry Placeholder="misterio@example.com" Margin="10,0,0,10" FontFamily="{StaticResource Thin}" />
+                    </StackLayout>
+
+
+
+                    <StackLayout Orientation="Horizontal" Padding="10" Margin="0,0,0,0">
+                        <Button Text="" VerticalOptions="CenterAndExpand" BackgroundColor="#333" TextColor="White" FontSize="Large" Padding="0" WidthRequest="20" HeightRequest="20" HorizontalOptions="Start"  />
+                        <Label Text="I'd like to recieve promotional commonications" FontSize="16" Margin="10,0,0,0"/>
+                    </StackLayout>
+
+                    <StackLayout VerticalOptions="EndAndExpand"  Margin="10,0,0,0">
+                        <Button Text="Next" Style="{StaticResource primeryBlackButton}"  Clicked="Button_Clicked"  FontFamily="{StaticResource Normal}" Padding="50,0,50,0"/>
+                    </StackLayout>
+
+                </StackLayout>
+            </Frame>
+        </Grid>
+
+        <StackLayout Grid.Column="0" Grid.Row="1" >
+            <StackLayout Spacing="50" VerticalOptions="EndAndExpand" Rotation="-90"  Orientation="Horizontal" Margin="0,0,0,50">
+                <Image Source="https://i.ibb.co/x8WpLWN/facebook-logo-1.png" Aspect="AspectFit" WidthRequest="18"/>
+                <Image Source="https://i.ibb.co/y4V9Qdv/twitter-logo-silhouette.png" Aspect="AspectFit" WidthRequest="18"/>
+                <Label  Text="SIGN IN"  MinimumWidthRequest="120" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
+                <Label  Text="SIGN UP" TextColor="{StaticResource primeryColorOrange}" MinimumWidthRequest="120" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
+            </StackLayout>
+        </StackLayout>
+
+    </Grid>
+
+</ContentPage>

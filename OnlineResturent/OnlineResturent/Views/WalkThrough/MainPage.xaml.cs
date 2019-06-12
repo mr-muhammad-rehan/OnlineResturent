@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Xamarin.Forms;
 
-namespace OnlineResturent
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
+
+namespace OnlineResturent.Views.WalkThrough
 {
-    public partial class MainPage : ContentPage
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class MainPage : CarouselPage
     {
         public MainPage()
         {

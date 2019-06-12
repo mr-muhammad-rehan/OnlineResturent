@@ -34,5 +34,12 @@
     <string>OnlineResturent</string>
     <key>XSAppIconAssets</key>
     <string>Assets.xcassets/AppIcon.appiconset</string>
+  <key>UIAppFonts</key>
+  <array>
+    <string>Montserrat-Thin.otf</string>
+    <string>Montserrat-SemiBold.otf</string>
+    <string>Montserrat-Bold.otf</string>
+  </array>
+
 </dict>
 </plist>
