@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:custom="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             x:Class="OnlineResturent.Views.AppCore.Home.ItemDetailsPage"
+              NavigationPage.HasNavigationBar="False"
+             BackgroundColor="{StaticResource primeryColorWhite}"
+             Padding="10">
+
+
+    <StackLayout>
+        <!--Navebarr-->
+        <StackLayout Orientation="Horizontal">
+            <Frame Padding="0">
+                <Image Source="https://i.ibb.co/fGd48sX/reply-all-button.png" WidthRequest="22" Aspect="AspectFit" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand"/>
+            </Frame>
+            <Label Text="Falafel" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" FontSize="Medium" TextColor="Black" FontAttributes="Bold"/>
+            <Frame Padding="0">
+                <Image Source="https://i.ibb.co/xfmJf9p/shopping-cart.png" Aspect="AspectFit" WidthRequest="22" VerticalOptions="EndAndExpand" HorizontalOptions="EndAndExpand"/>
+            </Frame>
+        </StackLayout>
+
+
+        <ScrollView>
+            <StackLayout>
+
+
+                <!--The Item  -->
+                <StackLayout Margin="20,50,20,20">
+                    <Frame Padding="0"  BackgroundColor="Black"  HeightRequest="350" WidthRequest="100" CornerRadius="12" >
+                        <Image Source="https://i.ibb.co/2t4p18S/falafel-pita.jpg" Aspect="AspectFill"  />
+                    </Frame>
+                    <Label Text="Chicken Shawerma" FontSize="Medium" HorizontalOptions="CenterAndExpand"/>
+                    <Label Text="AED 22" TextColor="{StaticResource primeryColorOrange}" FontFamily="{StaticResource Bold}" HorizontalOptions="CenterAndExpand" FontAttributes="Bold"/>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Button VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand" BackgroundColor="{StaticResource primeryColorWhite}" Text="-" FontSize="33" Padding="0"/>
+                        <Label  VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" FontSize="22" Text="1"/>
+                        <Button VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand" BackgroundColor="{StaticResource primeryColorWhite}" Text="+" FontSize="33" Padding="0"/>
+                    </StackLayout>
+
+
+                    <Image Source="https://i.ibb.co/5ckScQ1/down-arrow.png" Aspect="AspectFit" HeightRequest="50" x:Name="droper1">
+                    </Image>
+                    <StackLayout x:Name="extraAdds1">
+                        <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never"  VerticalScrollBarVisibility="Never" Padding="0,0,0,10">
+                            <StackLayout Spacing="10" Orientation="Horizontal" BindableLayout.ItemsSource="{Binding AddOns}" HeightRequest="100" >
+                                <BindableLayout.ItemTemplate >
+                                    <DataTemplate>
+                                        <StackLayout>
+                                            <Grid Padding="10,0">
+                                                <custom:PancakeView HeightRequest="100" WidthRequest="100" IsClippedToBounds="true" CornerRadius="12">
+                                                    <Grid>
+                                                        <Image Aspect="AspectFill" Source="{Binding ImageUrl}" />
+                                                        <custom:PancakeView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundGradientStartColor="Transparent"   />
+                                                    </Grid>
+                                                </custom:PancakeView>
+                                            </Grid>
+                                            <StackLayout Padding="12,0">
+                                                <Label Text="Name" />
+                                                <Label Text="AED 12"  FontAttributes="Bold"/>
+                                            </StackLayout>
+                                        </StackLayout>
+
+                                    </DataTemplate>
+                                </BindableLayout.ItemTemplate>
+                            </StackLayout>
+                        </ScrollView>
+                    </StackLayout>
+
+                    <Button Text="Add Cart" Style="{StaticResource primeryBlackButton}" Padding="40,0,40,0"/>
+                </StackLayout>
+
+
+
+
+                <StackLayout Margin="20,50,20,20">
+                    <Frame Padding="0"  BackgroundColor="Black"  HeightRequest="350" WidthRequest="100" CornerRadius="12" >
+                        <Image Source="https://i.ibb.co/sPbSPf6/operation-falafel-cl-Ns-E00.jpg" Aspect="AspectFill"  />
+                    </Frame>
+                    <Label Text="Classic Falafel" FontSize="Medium" HorizontalOptions="CenterAndExpand"/>
+                    <Label Text="AED 22" TextColor="{StaticResource primeryColorOrange}" FontFamily="{StaticResource Bold}" HorizontalOptions="CenterAndExpand" FontAttributes="Bold"/>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Button VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand" BackgroundColor="{StaticResource primeryColorWhite}" Text="-" FontSize="33" Padding="0"/>
+                        <Label  VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" FontSize="22" Text="1"/>
+                        <Button VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand" BackgroundColor="{StaticResource primeryColorWhite}" Text="+" FontSize="33" Padding="0"/>
+                    </StackLayout>
+
+
+                    <Image Source="https://i.ibb.co/5ckScQ1/down-arrow.png" Aspect="AspectFit" HeightRequest="50" x:Name="droper">
+                    </Image>
+                    <StackLayout x:Name="extraAdds">
+                        <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never"  VerticalScrollBarVisibility="Never" Padding="0,0,0,10">
+                            <StackLayout Spacing="10" Orientation="Horizontal" BindableLayout.ItemsSource="{Binding AddOns}" HeightRequest="100" >
+                                <BindableLayout.ItemTemplate >
+                                    <DataTemplate>
+                                        <StackLayout>
+                                            <Grid Padding="10,0">
+                                                <custom:PancakeView HeightRequest="100" WidthRequest="100" IsClippedToBounds="true" CornerRadius="12">
+                                                    <Grid>
+                                                        <Image Aspect="AspectFill" Source="{Binding ImageUrl}" />
+                                                        <custom:PancakeView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundGradientStartColor="Transparent"   />
+                                                    </Grid>
+                                                </custom:PancakeView>
+                                            </Grid>
+                                            <StackLayout Padding="12,0">
+                                                <Label Text="Name" />
+                                                <Label Text="AED 12"  FontAttributes="Bold"/>
+                                            </StackLayout>
+                                        </StackLayout>
+
+                                    </DataTemplate>
+                                </BindableLayout.ItemTemplate>
+                            </StackLayout>
+                        </ScrollView>
+                    </StackLayout>
+
+                    <Button Text="Add Cart" Style="{StaticResource primeryBlackButton}" Padding="40,0,40,0"/>
+                </StackLayout>
+
+            </StackLayout>
+        </ScrollView>
+
+    </StackLayout>
+
+
+</ContentPage>

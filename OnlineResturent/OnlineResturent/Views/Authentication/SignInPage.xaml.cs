@@ -1,4 +1,5 @@
-﻿using OnlineResturent.Views.Authentication.Registration;
+﻿using OnlineResturent.Views.AppCore.Core;
+using OnlineResturent.Views.Authentication.Registration;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,9 +29,9 @@ namespace OnlineResturent.Views.Authentication
            await Navigation.PushAsync(new ForgotPasswordPage());
         }
 
-        private void Button_Clicked(object sender, EventArgs e)
+        private async void Button_Clicked(object sender, EventArgs e)
         {
-           // Navigation.PushAsync(new HomePage());
+           await Navigation.PushAsync(new HomePage());
         }
 
         private void Button_Agree_Terms(object sender, EventArgs e)

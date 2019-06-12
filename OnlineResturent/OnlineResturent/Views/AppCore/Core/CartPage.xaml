@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OnlineResturent.Views.AppCore.Core.CartPage"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="{StaticResource primeryColorWhite}"
+             Padding="10">
+
+
+    <ListView SeparatorVisibility="None"
+              SelectionMode="None"
+              HasUnevenRows="True"
+              ItemsSource="{Binding AddOns}"
+              x:Name="myList">
+        <ListView.Header>
+            <StackLayout>
+                <!--Navebarr-->
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Falafel" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" FontSize="Medium" TextColor="Black" FontAttributes="Bold"/>
+                    <Frame Padding="0">
+                        <Image Source="https://i.ibb.co/xfmJf9p/shopping-cart.png" Aspect="AspectFit" WidthRequest="22" VerticalOptions="EndAndExpand" HorizontalOptions="EndAndExpand"/>
+                    </Frame>
+                </StackLayout>
+
+                <StackLayout Margin="30,20,20,20" Orientation="Horizontal">
+                    <Label Text="My Cart" FontSize="32" TextColor="{StaticResource secondryColorBlack}" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
+                    <Label Text="3 Items" TextColor="{StaticResource primeryColorOrange}" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand"/>
+                </StackLayout>
+
+            </StackLayout>
+        </ListView.Header>
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+
+                    <ContentView HorizontalOptions="FillAndExpand">
+                        <Frame  HasShadow="True" BorderColor="{StaticResource secondryColorLight}">
+                            <StackLayout Orientation="Horizontal">
+
+                                <StackLayout VerticalOptions="StartAndExpand" HorizontalOptions="Start"  HeightRequest="90" WidthRequest="90">
+                                    <Frame Padding="0" CornerRadius="6">
+                                        <Image Source="{Binding ImageUrl}"  Aspect="AspectFill" />
+                                    </Frame>
+                                </StackLayout>
+                                <StackLayout VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand">
+                                    <StackLayout Orientation="Horizontal" >
+                                        <Label Text="{Binding Name}"  TextColor="{StaticResource secondryColorBlack}"  VerticalOptions="FillAndExpand" />
+                                    </StackLayout>
+
+                                    <Label Text="{Binding Price, StringFormat='AED {0} '}" TextColor="#efa91e" FontSize="Small" TextDecorations="None" FontAttributes="None" />
+
+                                </StackLayout>
+
+
+                                <StackLayout  Orientation="Horizontal" VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand"    HeightRequest="30" >
+                                    <Button Text="-" BackgroundColor="{StaticResource primeryColorWhite}" TextColor="{StaticResource secondryColorBlack}" FontSize="33" Padding="0" WidthRequest="30" HeightRequest="30" VerticalOptions="End" HorizontalOptions="End"   />
+                                    <Label Text="1" FontSize="Large" TextColor="Black"  VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" WidthRequest="20" Margin="10,0,10,0"  />
+                                    <Button Text="+" BackgroundColor="{StaticResource primeryColorWhite}" TextColor="{StaticResource secondryColorBlack}" FontSize="33" Padding="0" WidthRequest="30" HeightRequest="30" VerticalOptions="End" HorizontalOptions="End"  />
+                                </StackLayout>
+
+                            </StackLayout>
+                        </Frame>
+                    </ContentView>
+
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+        <ListView.Footer>
+            <StackLayout>
+
+                <StackLayout Padding="10,10,10,0" >
+                    <Label Text="Notes" FontSize="Large"/>
+                    <Editor Placeholder="Special Notes" FontSize="Small" AutoSize="TextChanges" />
+                </StackLayout>
+
+                <StackLayout  Padding="10,0,10,0" Margin="20,10,20,10">
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="ADDRESS DELIVERY" TextColor="Gray"/>
+                        <Image Source="https://i.ibb.co/WHTzhNg/pencil-edit-button.png" Aspect="AspectFit" HorizontalOptions="EndAndExpand" WidthRequest="18"/>
+                    </StackLayout>
+                    <Label Text="H.No 22, Street 23, Marina JBR" FontSize="Medium" TextColor="{StaticResource secondryColorGray}"/>
+                </StackLayout>
+                <BoxView HeightRequest="2" HorizontalOptions="Fill" BackgroundColor="#ecf0f1" Margin="0,2,0,0"/>
+
+                <StackLayout  Padding="10,0,10,0" Margin="20,10,20,10">
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="PAYMENT METHOD" FontSize="Small" TextColor="Gray"/>
+                        <Image Source="https://i.ibb.co/WHTzhNg/pencil-edit-button.png" Aspect="AspectFit" HorizontalOptions="EndAndExpand" WidthRequest="18"/>
+                    </StackLayout>
+                    <Label Text="CREDIT CARD" FontSize="Medium" TextColor="{StaticResource secondryColorGray}"/>
+                </StackLayout>
+                <BoxView HeightRequest="2" HorizontalOptions="Fill" BackgroundColor="#ecf0f1" Margin="0,2,0,0"/>
+
+                <StackLayout Margin="50,20,50,0">
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Subtotal" HorizontalOptions="StartAndExpand" />
+                        <Label Text="AED 30" HorizontalOptions="EndAndExpand"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Shipping" HorizontalOptions="StartAndExpand" />
+                        <Label Text="AED 6.0" HorizontalOptions="EndAndExpand"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Total" HorizontalOptions="StartAndExpand" />
+                        <Label Text="AED 6.0" HorizontalOptions="EndAndExpand"/>
+                    </StackLayout>
+                </StackLayout>
+
+                <Button Style="{StaticResource primeryBlackButton}" Clicked="Button_Clicked" Text="Checkout" Padding="30,0,30,0"/>
+            </StackLayout>
+        </ListView.Footer>
+    </ListView>
+
+</ContentPage>

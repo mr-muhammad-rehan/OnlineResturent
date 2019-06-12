@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OnlineResturent.Views.AppCore.Core.MenuPage"
+             BackgroundColor="{StaticResource primeryColorWhite}"
+             NavigationPage.HasNavigationBar="False" >
+
+    <ScrollView>
+
+
+        <Grid>
+            <Grid.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+            </Grid.GestureRecognizers>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0" BackgroundColor="{StaticResource primeryColorOrange}">
+
+            </Grid>
+            <Grid Grid.Column="1" BackgroundColor="{StaticResource primeryColorWhite}">
+
+            </Grid>
+
+            <Grid Grid.ColumnSpan="2">
+
+                <StackLayout>
+                    <Frame HasShadow="True" Padding="0" Margin="40,40,40,0" CornerRadius="35">
+                        <StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Frame CornerRadius="150"  Padding="0" HasShadow="False">
+                                    <Image Source="https://i.ibb.co/sPbSPf6/operation-falafel-cl-Ns-E00.jpg" Aspect="AspectFill" WidthRequest="120" HeightRequest="120" />
+                                </Frame>
+                                <Label Text="Falafel &amp; CO." HorizontalOptions="CenterAndExpand" TextColor="{StaticResource primeryColorOrange}" FontFamily="{StaticResource Normal}" FontSize="Medium" VerticalOptions="CenterAndExpand"/>
+
+                                <Frame CornerRadius="150" HorizontalOptions="EndAndExpand" Padding="10" HasShadow="False">
+                                    <Image Source="https://i.ibb.co/jHf746b/arrow-point-to-right.png" Aspect="AspectFill" WidthRequest="45" HeightRequest="45" />
+                                </Frame>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame HasShadow="True" Padding="0"  Margin="40,40,40,0" CornerRadius="35">
+                        <StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Frame CornerRadius="150"  Padding="0" HasShadow="False">
+                                    <Image Source="https://i.ibb.co/g9m5MQy/operation-falafel-fa-YA4-Mg.jpg" Aspect="AspectFill" WidthRequest="120" HeightRequest="120" />
+                                </Frame>
+                                <Label Text="Soup &amp; Salads" HorizontalOptions="CenterAndExpand" TextColor="{StaticResource primeryColorOrange}" FontFamily="{StaticResource Normal}" FontSize="Medium"  VerticalOptions="CenterAndExpand"/>
+
+                                <Frame CornerRadius="150" HorizontalOptions="EndAndExpand" Padding="10" HasShadow="False">
+                                    <Image Source="https://i.ibb.co/jHf746b/arrow-point-to-right.png" Aspect="AspectFill" WidthRequest="45" HeightRequest="45" />
+                                </Frame>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame HasShadow="True" Padding="0"  Margin="40,40,40,0" CornerRadius="35">
+                        <StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Frame CornerRadius="150"  Padding="0" HasShadow="False">
+                                    <Image Source="https://i.ibb.co/q5LDYpJ/combo.jpg" Aspect="AspectFill" WidthRequest="120" HeightRequest="120" />
+                                </Frame>
+                                <Label Text="O:F Boxes" HorizontalOptions="CenterAndExpand" TextColor="{StaticResource primeryColorOrange}" FontFamily="{StaticResource Normal}" FontSize="Medium"  VerticalOptions="CenterAndExpand"/>
+
+                                <Frame CornerRadius="150" HorizontalOptions="EndAndExpand" Padding="10" HasShadow="False">
+                                    <Image Source="https://i.ibb.co/jHf746b/arrow-point-to-right.png" Aspect="AspectFill" WidthRequest="45" HeightRequest="45" />
+                                </Frame>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame HasShadow="True" Padding="0"  Margin="40,40,40,0" CornerRadius="35">
+                        <StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Frame CornerRadius="150"  Padding="0" HasShadow="False">
+                                    <Image Source="https://i.ibb.co/2t4p18S/falafel-pita.jpg" Aspect="AspectFill" WidthRequest="120" HeightRequest="120" />
+                                </Frame>
+                                <Label Text="Sandwiches" HorizontalOptions="CenterAndExpand" TextColor="{StaticResource primeryColorOrange}" FontFamily="{StaticResource Normal}" FontSize="Medium"  VerticalOptions="CenterAndExpand"/>
+
+                                <Frame CornerRadius="150" HorizontalOptions="EndAndExpand" Padding="10" HasShadow="False">
+                                    <Image Source="https://i.ibb.co/jHf746b/arrow-point-to-right.png" Aspect="AspectFill" WidthRequest="45" HeightRequest="45" />
+                                </Frame>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame HasShadow="True" Padding="0"  Margin="40,40,40,0" CornerRadius="35">
+                        <StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Frame CornerRadius="150"  Padding="0" HasShadow="False">
+                                    <Image Source="https://i.ibb.co/dtRQy5R/chicken-saj-platter.jpg" Aspect="AspectFill" WidthRequest="120" HeightRequest="120" />
+                                </Frame>
+                                <Label Text="O:F Platters" HorizontalOptions="CenterAndExpand" TextColor="{StaticResource primeryColorOrange}" FontFamily="{StaticResource Normal}" FontSize="Medium"  VerticalOptions="CenterAndExpand"/>
+
+                                <Frame CornerRadius="150" HorizontalOptions="EndAndExpand" Padding="10" HasShadow="False">
+                                    <Image Source="https://i.ibb.co/jHf746b/arrow-point-to-right.png" Aspect="AspectFill" WidthRequest="45" HeightRequest="45" />
+                                </Frame>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame HasShadow="True" Padding="0"  Margin="40,40,40,0" CornerRadius="35">
+                        <StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Frame CornerRadius="150"  Padding="0" HasShadow="False">
+                                    <Image Source="https://i.ibb.co/kKNctc0/eggs-and-potato.jpg" Aspect="AspectFill" WidthRequest="120" HeightRequest="120" />
+                                </Frame>
+                                <Label Text="Fukhara &amp; Pans" HorizontalOptions="CenterAndExpand" TextColor="{StaticResource primeryColorOrange}" FontFamily="{StaticResource Normal}" FontSize="Medium"  VerticalOptions="CenterAndExpand"/>
+
+                                <Frame CornerRadius="150" HorizontalOptions="EndAndExpand" Padding="10" HasShadow="False">
+                                    <Image Source="https://i.ibb.co/jHf746b/arrow-point-to-right.png" Aspect="AspectFill" WidthRequest="45" HeightRequest="45" />
+                                </Frame>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+
+
+                    <Frame HasShadow="True" Padding="0"  Margin="40,40,40,0" CornerRadius="35">
+                        <StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Frame CornerRadius="150"  Padding="0" HasShadow="False">
+                                    <Image Source="https://i.ibb.co/hBpb5Jw/operation-falafel-za-kig-FO.jpg" Aspect="AspectFill" WidthRequest="120" HeightRequest="120" />
+                                </Frame>
+                                <Label Text="Manaeesh &amp; Wraps" HorizontalOptions="CenterAndExpand" TextColor="{StaticResource primeryColorOrange}" FontFamily="{StaticResource Normal}" FontSize="Medium"  VerticalOptions="CenterAndExpand"/>
+
+                                <Frame CornerRadius="150" HorizontalOptions="EndAndExpand" Padding="10" HasShadow="False">
+                                    <Image Source="https://i.ibb.co/jHf746b/arrow-point-to-right.png" Aspect="AspectFill" WidthRequest="45" HeightRequest="45" />
+                                </Frame>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+
+
+                    <Frame HasShadow="True" Padding="0"  Margin="40,40,40,0" CornerRadius="35">
+                        <StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Frame CornerRadius="150"  Padding="0" HasShadow="False">
+                                    <Image Source="https://i.ibb.co/Svh8BhJ/pistachio-jar.jpg" Aspect="AspectFill" WidthRequest="120" HeightRequest="120" />
+                                </Frame>
+                                <Label Text="Desserts" HorizontalOptions="CenterAndExpand" TextColor="{StaticResource primeryColorOrange}" FontFamily="{StaticResource Normal}" FontSize="Medium"  VerticalOptions="CenterAndExpand"/>
+
+                                <Frame CornerRadius="150" HorizontalOptions="EndAndExpand" Padding="10" HasShadow="False">
+                                    <Image Source="https://i.ibb.co/jHf746b/arrow-point-to-right.png" Aspect="AspectFill" WidthRequest="45" HeightRequest="45" />
+                                </Frame>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame HasShadow="True" Padding="0"  Margin="40,40,40,0" CornerRadius="35">
+                        <StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Frame CornerRadius="150"  Padding="0" HasShadow="False">
+                                    <Image Source="https://i.ibb.co/2vb8ndf/watermelon.jpg" Aspect="AspectFill" WidthRequest="120" HeightRequest="120" />
+                                </Frame>
+                                <Label Text="Drinks" HorizontalOptions="CenterAndExpand" TextColor="{StaticResource primeryColorOrange}" FontFamily="{StaticResource Normal}" FontSize="Medium" VerticalOptions="CenterAndExpand"/>
+
+                                <Frame CornerRadius="150" HorizontalOptions="EndAndExpand" Padding="10" HasShadow="False">
+                                    <Image Source="https://i.ibb.co/jHf746b/arrow-point-to-right.png" Aspect="AspectFill" WidthRequest="45" HeightRequest="45" />
+                                </Frame>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+
+                </StackLayout>
+
+
+            </Grid>
+
+        </Grid>
+    </ScrollView>
+</ContentPage>

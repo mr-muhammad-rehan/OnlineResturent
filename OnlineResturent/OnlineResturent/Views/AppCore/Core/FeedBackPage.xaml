@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OnlineResturent.Views.AppCore.Core.FeedBackPage"
+              NavigationPage.HasNavigationBar="False"
+             Padding="10"
+             BackgroundColor="{StaticResource secondryColorBlack}">
+
+
+    <Grid   Margin="20,30,20,0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" >
+        <Frame HasShadow="True" Padding="0" Margin="10,0,0,30" CornerRadius="12">
+            <StackLayout>
+
+
+                <StackLayout Padding="10">
+                    <StackLayout>
+                        <Label Text="Our Story " FontSize="32" FontFamily="{StaticResource Normal}" TextColor="Black"/>
+                    </StackLayout>
+                    <BoxView HeightRequest="2" HorizontalOptions="Fill" BackgroundColor="#ecf0f1" Margin="0,2,0,0"/>
+                    <ScrollView HeightRequest="200">
+                        <StackLayout>
+                            <Label Text="The orsdfoperate on the concept of 'Revival &amp; Survival' of Arabic cuisine. Balancing old-street ﬂavors with Twenty-First Century trends, it is a combination of fresh experiences that promises its customers a surprising integration of the past with the present.
+
+In a contemporary space, Operation: Falafel creates a mood common to the old street marketplace. Organizing its service model into individual food stations that mimic food carts on the street.
+
+Fresh ingredients and traditional recipes make Operation: Falafel a trailblazer among Dubai's Fresh Casual category. Pioneering authentic Arabic cuisine with a history and a story – offering high-consumer appeal and massive marketability for local and global franchise opportunities.
+
+We could try to explain the Operation: Falafel experience in so many words, but 'Indoor Street Market in a Contemporary Look' feels just about right.
+
+For those who ask why?
+
+The physical structure of our restaurants is a storehouse where traditional ﬂavors and street experiences are stored over time – for years to come."/>
+                            <Image Source="https://i.ibb.co/LzX8Q6Y/asd.png" Aspect="AspectFit"/>
+                        </StackLayout>
+                    </ScrollView>
+
+
+                </StackLayout>
+
+
+
+                <StackLayout Padding="10">
+                    <StackLayout>
+                        <Label Text="Your Opinion Matters! " FontSize="32" FontFamily="{StaticResource Normal}" TextColor="Black"/>
+                    </StackLayout>
+                    <BoxView HeightRequest="2" HorizontalOptions="Fill" BackgroundColor="#ecf0f1" Margin="0,2,0,0"/>
+                    <ScrollView HeightRequest="200">
+
+                        <StackLayout>
+                            <Entry Placeholder="Where You Met Us?" FontSize="Small"/>
+
+                            <Editor Placeholder="Your Message To Us..." FontSize="Small"/>
+                        </StackLayout>
+
+                    </ScrollView>
+
+
+                </StackLayout>
+
+
+
+
+                <StackLayout VerticalOptions="CenterAndExpand"  Margin="10,0,0,0">
+                    <Button Text="Say It!" Style="{StaticResource primeryBlackButton}"   FontFamily="{StaticResource Normal}" Padding="50,0,50,0"/>
+                </StackLayout>
+
+            </StackLayout>
+        </Frame>
+    </Grid>
+</ContentPage>

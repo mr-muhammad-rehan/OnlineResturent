@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OnlineResturent.Views.AppCore.Core.OrderHomePage"
+             xmlns:custom="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             BackgroundColor="{StaticResource primeryColorWhite}"
+             NavigationPage.HasNavigationBar="False"
+             Padding="10">
+
+    <StackLayout>
+
+        <Grid Margin="0,30,0,0">
+
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <StackLayout Grid.Column="0" Margin="20,0,0,0" Spacing="0" VerticalOptions="Center">
+                    <Label Text="MON,20,MAY2019" TextColor="{StaticResource primeryColorOrange}" FontFamily="{StaticResource Normal}"/>
+                    <Label Text="Hi Muhammad, Let's eat!" FontSize="24"  TextColor="Black" />
+                </StackLayout>
+
+                <StackLayout Grid.Column="1" Spacing="0" Margin="0,0,20,0" HorizontalOptions="EndAndExpand" VerticalOptions="Center">
+
+                    <Frame CornerRadius="50"  Padding="0" HasShadow="False">
+                        <Image Source="https://i.ibb.co/PcN7N5T/download.jpg" Aspect="AspectFill" WidthRequest="40" HeightRequest="40" />
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"/>
+                        </Frame.GestureRecognizers>
+                    </Frame>
+
+                </StackLayout>
+            </Grid>
+
+        </Grid>
+        <StackLayout Padding="20" Margin="0,20,0,0" >
+            <Frame HasShadow="False" Padding="0" CornerRadius="8">
+                <SearchBar Placeholder="Use me to find your choice" BackgroundColor="{StaticResource secondryColorWhite}"  PlaceholderColor="{StaticResource secondryColorGray}"/>
+            </Frame>
+        </StackLayout>
+
+        <ScrollView>
+
+            <StackLayout>
+                <!--Your Fave-->
+                <StackLayout Orientation="Horizontal"  Margin="0,40,0,10">
+                    <Image Source="https://i.ibb.co/kxgfZVQ/like.png" Aspect="AspectFit" VerticalOptions="CenterAndExpand"   WidthRequest="18" />
+                    <Label HorizontalOptions="Start" FontFamily="{StaticResource Normal}" Text="Just For You"  VerticalOptions="CenterAndExpand" FontSize="20" Margin="20,0,0,0" />
+                </StackLayout>
+                <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never" VerticalScrollBarVisibility="Never">
+                    <StackLayout Spacing="0" Orientation="Horizontal" BindableLayout.ItemsSource="{Binding YourFaverates}" HeightRequest="180">
+                        <BindableLayout.ItemTemplate>
+                            <DataTemplate>
+                                <StackLayout>
+                                    <Grid Padding="10,0">
+                                        <custom:PancakeView HeightRequest="180" WidthRequest="120" IsClippedToBounds="true" CornerRadius="12">
+
+                                            <Grid>
+                                                <Image Aspect="AspectFill" Source="{Binding ImageUrl}" />
+                                                <custom:PancakeView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundGradientStartColor="Transparent"   />
+                                            </Grid>
+                                        </custom:PancakeView>
+
+                                    </Grid>
+                                    <StackLayout Padding="12,0">
+                                        <Label Text="Name" FontFamily="{StaticResource Normal}"/>
+                                        <Label Text="AED 12" FontFamily="{StaticResource Normal}"  FontAttributes="Bold"/>
+                                    </StackLayout>
+                                </StackLayout>
+
+                            </DataTemplate>
+                        </BindableLayout.ItemTemplate>
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+                </ScrollView>
+
+
+
+
+                <!--O:F Best Sellers-->
+                <StackLayout Orientation="Horizontal" Margin="0,40,0,10">
+                    <Image Source="https://i.ibb.co/VJccgKj/gold-medal.png" Aspect="AspectFit" VerticalOptions="CenterAndExpand"   WidthRequest="18" />
+                    <Label HorizontalOptions="Start" FontFamily="{StaticResource Normal}"  Text="O:F Best Sellers"  VerticalOptions="CenterAndExpand" FontSize="20" Margin="20,0,0,0" />
+                </StackLayout>
+
+                <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never" VerticalScrollBarVisibility="Never">
+                    <StackLayout Spacing="0" Orientation="Horizontal" BindableLayout.ItemsSource="{Binding YourFaverates}" HeightRequest="180">
+                        <BindableLayout.ItemTemplate>
+                            <DataTemplate>
+                                <StackLayout>
+                                    <Grid Padding="10,0">
+                                        <custom:PancakeView HeightRequest="180" WidthRequest="250" IsClippedToBounds="true" CornerRadius="12">
+
+                                            <Grid>
+                                                <Image Aspect="AspectFill" Source="{Binding ImageUrl}" />
+                                                <custom:PancakeView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundGradientStartColor="Transparent"  />
+                                            </Grid>
+                                        </custom:PancakeView>
+
+                                    </Grid>
+                                    <StackLayout Padding="12,0">
+                                        <Label Text="Name" FontFamily="{StaticResource Normal}" />
+                                        <Label Text="AED 12" FontFamily="{StaticResource Normal}"  FontAttributes="Bold"/>
+                                    </StackLayout>
+                                </StackLayout>
+
+                            </DataTemplate>
+                        </BindableLayout.ItemTemplate>
+                    </StackLayout>
+                </ScrollView>
+
+
+
+                <!--O:F O:F Boxes-->
+                <StackLayout Orientation="Horizontal" Margin="0,40,0,10">
+                    <Image Source="https://i.ibb.co/89WB6vm/lunch-box.png" Aspect="AspectFit" VerticalOptions="CenterAndExpand"   WidthRequest="18" />
+                    <Label HorizontalOptions="Start" FontFamily="{StaticResource Normal}"  Text="O:F Boxes"  VerticalOptions="CenterAndExpand" FontSize="20" Margin="20,0,0,0" />
+                </StackLayout>
+
+                <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never" VerticalScrollBarVisibility="Never">
+                    <StackLayout Spacing="0" Orientation="Horizontal" BindableLayout.ItemsSource="{Binding YourFaverates}" HeightRequest="180">
+                        <BindableLayout.ItemTemplate>
+                            <DataTemplate>
+                                <StackLayout>
+                                    <Grid Padding="10,0">
+                                        <custom:PancakeView HeightRequest="180" WidthRequest="250" IsClippedToBounds="true" CornerRadius="12">
+
+                                            <Grid>
+                                                <Image Aspect="AspectFill" Source="{Binding ImageUrl}" />
+                                                <custom:PancakeView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundGradientStartColor="Transparent"  />
+                                            </Grid>
+                                        </custom:PancakeView>
+
+                                    </Grid>
+                                    <StackLayout Padding="12,0">
+                                        <Label Text="Name" FontFamily="{StaticResource Normal}"/>
+                                        <Label Text="AED 12" FontFamily="{StaticResource Normal}" FontAttributes="Bold"/>
+                                    </StackLayout>
+                                </StackLayout>
+
+                            </DataTemplate>
+                        </BindableLayout.ItemTemplate>
+                    </StackLayout>
+                </ScrollView>
+
+                <!--Best Category-->
+                <StackLayout Orientation="Horizontal" Margin="0,40,0,10">
+                    <Image Source="https://i.ibb.co/2dNDGtG/develop-1.png" Aspect="AspectFit" VerticalOptions="CenterAndExpand"   WidthRequest="18" />
+                    <Label HorizontalOptions="Start" FontFamily="{StaticResource Normal}"  Text="Popular Categories"  VerticalOptions="CenterAndExpand" FontSize="20" Margin="20,0,0,0" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                    <Grid>
+                        <custom:PancakeView HeightRequest="120" WidthRequest="120" IsClippedToBounds="true" CornerRadius="12">
+                            <Grid>
+                                <Image Aspect="AspectFill" Source="https://i.ibb.co/q5LDYpJ/combo.jpg" />
+                                <custom:PancakeView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundGradientStartColor="Transparent" BackgroundGradientEndColor="{StaticResource primeryColorOrange}" />
+                                <StackLayout Spacing="0" Margin="12" VerticalOptions="EndAndExpand">
+                                    <Label FontSize="16"  TextColor="#fff" Text="O:F Boxes" />
+                                </StackLayout>
+                            </Grid>
+                        </custom:PancakeView>
+                    </Grid>
+
+                    <Grid>
+                        <custom:PancakeView HeightRequest="120" WidthRequest="120" IsClippedToBounds="true" CornerRadius="12">
+                            <Grid>
+                                <Image Aspect="AspectFill" Source="https://i.ibb.co/rdr5WKB/operation-falafel-su-INO1-A.jpg" />
+                                <custom:PancakeView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundGradientStartColor="Transparent" BackgroundGradientEndColor="{StaticResource primeryColorOrange}" />
+                                <StackLayout Spacing="0" Margin="12" VerticalOptions="EndAndExpand">
+                                    <Label FontSize="16"  TextColor="#fff" Text="Fukhara &amp; Pans" />
+                                </StackLayout>
+                            </Grid>
+                        </custom:PancakeView>
+                    </Grid>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                    <Grid >
+                        <custom:PancakeView HeightRequest="120" WidthRequest="120" IsClippedToBounds="true" CornerRadius="12">
+                            <Grid>
+                                <Image Aspect="AspectFill" Source="https://i.ibb.co/1nY0h9K/operation-falafel-ka-i-Cwa-C.jpg" />
+                                <custom:PancakeView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundGradientStartColor="Transparent" BackgroundGradientEndColor="{StaticResource primeryColorOrange}" />
+                                <StackLayout Spacing="0" Margin="12" VerticalOptions="EndAndExpand">
+                                    <Label FontSize="16"  TextColor="#fff" Text="Manaeesh &amp; wraps" />
+                                </StackLayout>
+                            </Grid>
+                        </custom:PancakeView>
+                    </Grid>
+
+                    <Grid >
+                        <custom:PancakeView HeightRequest="120" WidthRequest="120" IsClippedToBounds="true" CornerRadius="12">
+                            <Grid>
+                                <Image Aspect="AspectFill" Source="https://i.ibb.co/2t4p18S/falafel-pita.jpg" />
+                                <custom:PancakeView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundGradientStartColor="Transparent" BackgroundGradientEndColor="{StaticResource primeryColorOrange}" />
+                                <StackLayout Spacing="0" Margin="12" VerticalOptions="EndAndExpand">
+                                    <Label FontSize="16"  TextColor="#fff" Text="Sandwiches" />
+                                </StackLayout>
+                            </Grid>
+                        </custom:PancakeView>
+                    </Grid>
+                </StackLayout>
+
+
+                <!--Tags-->
+                <StackLayout Orientation="Horizontal" Margin="0,40,0,10">
+                    <Image Source="https://i.ibb.co/kxgfZVQ/like.png" Aspect="AspectFit" VerticalOptions="CenterAndExpand"   WidthRequest="18" />
+                    <Label HorizontalOptions="Start" FontFamily="{StaticResource Normal}"  Text="Tags"  VerticalOptions="CenterAndExpand" FontSize="20" Margin="20,0,0,0" />
+                </StackLayout>
+                <StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Button Text="VEGAN" Style="{StaticResource primeryBlackButton}" CornerRadius="12" Padding="1"/>
+                        <Button Text="VEG" Style="{StaticResource primeryOrangeButton}" CornerRadius="12" Padding="1"/>
+                    </StackLayout>
+                </StackLayout>
+
+
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+
+</ContentPage>

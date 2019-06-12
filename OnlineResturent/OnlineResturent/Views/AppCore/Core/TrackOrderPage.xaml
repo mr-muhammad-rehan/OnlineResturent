@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OnlineResturent.Views.AppCore.Core.TrackOrderPage">
+    
+    <StackLayout>
+        <Image Source="https://i.ibb.co/n0vKm0F/open-uri20150925-3-172ie81.png" Aspect="AspectFill" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+        <Frame HasShadow="True" Padding="0" Margin="10,0,0,30" CornerRadius="12">
+            <StackLayout>
+
+                <StackLayout Orientation="Horizontal" Padding="10">
+                    <StackLayout>
+                        <Label Text="Transection Detail" FontSize="32" FontFamily="{StaticResource Normal}" TextColor="Black"/>
+                    </StackLayout>
+                    <Button Text="X" BackgroundColor="{StaticResource primeryColorWhite}" TextColor="{StaticResource secondryColorBlack}" FontSize="Medium" Padding="0" WidthRequest="25" HeightRequest="25" VerticalOptions="StartAndExpand" HorizontalOptions="EndAndExpand"  />
+                </StackLayout>
+
+                <StackLayout  Padding="10" Margin="0,20,0,0">
+                    <Label Text="ADDRESS DELIVERY" TextColor="Gray" FontFamily="{StaticResource Thin}" />
+                    <Label Text="H.No 22, Street 23, Marina JBR" FontSize="Medium" TextColor="{StaticResource secondryColorGray}"/>
+                </StackLayout>
+                <StackLayout VerticalOptions="CenterAndExpand"  Margin="10">
+                    <Button Text="Call Now" Style="{StaticResource primeryOrangeButton}"   FontFamily="{StaticResource Normal}" Padding="50,0,50,0"/>
+                </StackLayout>
+
+            </StackLayout>
+        </Frame>
+
+    </StackLayout>
+</ContentPage>
