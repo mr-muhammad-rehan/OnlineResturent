@@ -3,7 +3,6 @@
 A Xamarin.Forms version of a Smart resturent to prove you can create good-looking UI with Xamarin.Forms.
 I have much more to share, please give me your worthy openion for improving my skills 
 
-![Screen](https://github.com/MisterioRee/OnlineResturent/blob/master/src1.gif)
 
 ![Screen](https://github.com/MisterioRee/OnlineResturent/blob/master/src2.gif) 
 
